@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Portafolio/static/css/main.6019c7ed.css",
+    "main.js": "/Portafolio/static/js/main.b9313c15.js",
+    "static/js/453.a9c87868.chunk.js": "/Portafolio/static/js/453.a9c87868.chunk.js",
+    "static/media/sobreMi.png": "/Portafolio/static/media/sobreMi.71123ffdd0295953423b.png",
+    "static/media/estudios.png": "/Portafolio/static/media/estudios.1f22b0ae7c601eacb198.png",
+    "static/media/habilidades.png": "/Portafolio/static/media/habilidades.606a13934bda81556fb6.png",
+    "static/media/experiencia.png": "/Portafolio/static/media/experiencia.ce315a4aad6fe8855f3b.png",
+    "static/media/fotocarne.png": "/Portafolio/static/media/fotocarne.8a378b6f1ba5811fb62c.png",
+    "static/media/logoJT.png": "/Portafolio/static/media/logoJT.fc4993dd13166ace9307.png",
+    "index.html": "/Portafolio/index.html",
+    "main.6019c7ed.css.map": "/Portafolio/static/css/main.6019c7ed.css.map",
+    "main.b9313c15.js.map": "/Portafolio/static/js/main.b9313c15.js.map",
+    "453.a9c87868.chunk.js.map": "/Portafolio/static/js/453.a9c87868.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6019c7ed.css",
+    "static/js/main.b9313c15.js"
+  ]
+}
