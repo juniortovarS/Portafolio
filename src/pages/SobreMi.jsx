@@ -2,95 +2,142 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../styles/Section.css";
-import foto from "../assets/fotocarne.png";
+import foto from "../assets/fotoCarne.png";
 
 const SobreMi = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.hash) {
+  if (location.hash) {
+    const scrollToSection = () => {
       const section = document.querySelector(location.hash);
+      const navbarHeight = document.querySelector(".nav-wrapper")?.offsetHeight || 0;
+
       if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
+        const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: sectionTop - navbarHeight,
+          behavior: "smooth",
+        });
       }
-    }
-  }, [location]);
+    };
+
+    // Esperar un poco a que el DOM esté listo
+    setTimeout(scrollToSection, 300);
+  }
+}, [location]);
 
   return (
     <section className="sobre-mi-section">
-     
-
-      {/* Imagen de presentación */}
-      <motion.div
-        className="sobre-mi-foto-container"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        <img
-          src={foto}
-          alt="Foto profesional de perfil"
-          className="foto-carnet-grande"
-        />
-      </motion.div>
-
       {/* Perfil Profesional */}
       <motion.div
-        id="perfil"
-        className="sobre-mi-info"
-        initial={{ y: 40, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
+        className="sobre-mi-contenido"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
       >
-        <h3>Perfil Profesional</h3>
-        <p>
-          Soy Junior Tovar, estudiante de Ingeniería de Sistemas con experiencia en desarrollo web tanto frontend como backend. Me especializo en la creación de soluciones digitales funcionales, interactivas y visualmente atractivas. Mi enfoque combina lógica estructurada con diseño centrado en el usuario.
-        </p>
+        <div className="sobre-mi-info perfil-texto">
+          <h3>Perfil Profesional</h3>
+          <p>
+            Soy Junior Tovar, estudiante de Ingeniería de Sistemas con experiencia en desarrollo web full stack, enfocado en construir soluciones digitales modernas, escalables e intuitivas. Manejo lenguajes como JavaScript, TypeScript, Python, Java, C#, PHP y SQL, y trabajo con tecnologías frontend como React, Next.js, Tailwind CSS, Bootstrap, SASS, Vite y Framer Motion. En backend utilizo Node.js, Express, .NET Core, ASP.NET MVC y Spring Boot, desarrollando APIs REST seguras con autenticación JWT. Tengo dominio de bases de datos como MySQL, PostgreSQL, SQLite, MongoDB, SQL Server y Firebase. Además, uso herramientas como Git, GitHub, GitLab, Docker, Render, Vercel, Swagger y Postman, aplicando principios de diseño responsivo, arquitectura MVC, programación orientada a objetos y documentación técnica. Me considero autodidacta, proactivo y apasionado por crear experiencias digitales de alto impacto que combinan lógica estructurada con diseño centrado en el usuario.
+          </p>
+        </div>
+        <div className="sobre-mi-foto-container">
+          <img
+            src={foto}
+            alt="Foto profesional de perfil"
+            className="foto-carnet-grande"
+          />
+        </div>
       </motion.div>
 
       {/* Misión y Valores */}
       <motion.div
         id="mision"
-        className="sobre-mi-info"
-        initial={{ y: 40, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        className="sobre-mi-contenido"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
       >
-        <h3>Misión y Valores</h3>
-        <p>
-          Mi propósito es desarrollar soluciones tecnológicas que generen impacto positivo, impulsadas por principios de integridad, compromiso profesional y aprendizaje continuo. Valoro la innovación responsable y la mejora constante.
-        </p>
+        <div className="perfil-texto">
+          <h3>Misión y Valores</h3>
+          <p>
+            Mi misión como futuro ingeniero de sistemas es desarrollar soluciones tecnológicas innovadoras, funcionales y accesibles que generen un impacto positivo en las personas, empresas y comunidades. Busco combinar el pensamiento analítico con la creatividad para construir productos digitales que no solo resuelvan problemas reales, sino que también aporten valor a largo plazo.
+            <br /><br />
+            Me guío por valores fundamentales como la responsabilidad, la ética profesional, la mejora continua y el aprendizaje constante. Creo firmemente en la colaboración, el respeto por la diversidad de ideas y el compromiso con la calidad en cada etapa del desarrollo.
+            <br /><br />
+            Mi enfoque está centrado en el usuario, priorizando la usabilidad, el rendimiento y la experiencia final, sin perder de vista la escalabilidad, la seguridad y la sostenibilidad tecnológica. Aspiro a crecer como profesional íntegro, que no solo domine herramientas y lenguajes, sino que también contribuya a construir una industria tecnológica más humana, transparente y orientada al futuro.
+          </p>
+        </div>
+        <div className="sobre-mi-foto-container">
+          <img
+            src={foto}
+            alt="Ilustración de misión"
+            className="foto-carnet-grande"
+          />
+        </div>
       </motion.div>
 
-      {/* Intereses Profesionales */}
+      {/* Intereses y Pasatiempos */}
       <motion.div
         id="interes"
-        className="sobre-mi-info"
-        initial={{ y: 40, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        className="sobre-mi-contenido"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
       >
-        <h3>Intereses Profesionales</h3>
-        <p>
-          Me apasionan el desarrollo web moderno, la inteligencia artificial aplicada a productos digitales, y las plataformas tecnológicas enfocadas en servicios financieros. Busco constantemente nuevas formas de optimizar la experiencia del usuario a través de soluciones funcionales y escalables.
-        </p>
+        <div className="sobre-mi-foto-container">
+          <img
+            src={foto}
+            alt="Ilustración de intereses"
+            className="foto-carnet-grande"
+          />
+        </div>
+        <div className="perfil-texto">
+          <h3>Intereses y Pasatiempos</h3>
+          <p>
+            Más allá del mundo del desarrollo, me apasiona mantener un equilibrio entre el crecimiento profesional y personal. En mis tiempos libres disfruto jugar fútbol, una actividad que no solo me permite mantenerme activo, sino también reforzar valores como el trabajo en equipo, la disciplina y la estrategia.
+            <br /><br />
+            Como freelancer, encuentro satisfacción diseñando páginas web profesionales y funcionales, donde puedo aplicar mi creatividad y conocimientos técnicos para transformar ideas en experiencias digitales impactantes. También me gusta escuchar música, ya que me ayuda a relajarme y concentrarme en mis procesos creativos.
+            <br /><br />
+            Asisto regularmente al gimnasio, priorizando el bienestar físico como parte fundamental de mi productividad y enfoque. Además, soy una persona curiosa y autodidacta: me gusta leer sobre tecnología, desarrollo personal y actualidad, y constantemente busco nuevas formas de optimizar mis habilidades, mantenerme actualizado con las últimas tendencias del sector y crecer tanto a nivel técnico como humano.
+            <br /><br />
+            Considero que cada interés personal aporta a mi visión integral como profesional comprometido, disciplinado y en constante evolución.
+          </p>
+        </div>
       </motion.div>
 
-      {/* Valor Diferencial */}
+      {/* ¿Qué me diferencia? */}
       <motion.div
         id="diferencia"
-        className="sobre-mi-info"
-        initial={{ y: 40, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        className="sobre-mi-contenido"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.7 }}
       >
-        <h3>¿Qué me diferencia?</h3>
-        <p>
-          Destaco por mi habilidad para integrar pensamiento analítico con creatividad visual, junto con un fuerte sentido de responsabilidad y un enfoque meticuloso en el usuario. Esta combinación me permite aportar soluciones innovadoras con impacto real.
-        </p>
+        <div className="perfil-texto">
+          <h3>¿Qué me diferencia?</h3>
+          <p>
+            Lo que me diferencia de los demás es mi enfoque integral y equilibrado entre la técnica, la creatividad y el compromiso humano. No solo domino herramientas, lenguajes y frameworks modernos, sino que también me esfuerzo por comprender profundamente las necesidades del usuario, del negocio y del contexto en el que se implementa una solución.
+            <br /><br />
+            Mi capacidad para trabajar tanto en el frontend como en el backend me permite tener una visión completa del desarrollo, y eso me convierte en un puente entre el diseño y la funcionalidad. Soy una persona autodidacta, resiliente y altamente adaptable: no espero a que alguien me diga qué aprender, me anticipo y me capacito constantemente.
+            <br /><br />
+            Además, tengo un fuerte sentido de responsabilidad y una ética de trabajo enfocada en los detalles, la eficiencia y la mejora continua. Me involucro con pasión en cada proyecto, ya sea personal, académico o freelance, buscando siempre que lo que construyo no solo funcione, sino que inspire, aporte valor real y se sostenga en el tiempo.
+            <br /><br />
+            Lo que me diferencia no es solo lo que sé hacer, sino cómo lo hago: con actitud, visión crítica, empatía y una mentalidad orientada a crecer y aportar soluciones que marquen la diferencia.
+          </p>
+        </div>
+        <div className="sobre-mi-foto-container">
+          <img
+            src={foto}
+            alt="Valor diferencial"
+            className="foto-carnet-grande"
+          />
+        </div>
       </motion.div>
     </section>
   );
 };
 
 export default SobreMi;
+

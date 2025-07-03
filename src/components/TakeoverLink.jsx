@@ -49,7 +49,7 @@ const TakeoverLink = ({ onSectionClick }) => {
 
   const handleClick = (key) => {
     if (onSectionClick) onSectionClick(); // 👉 Oculta Takeover
-    navigate(`/${key}`);
+    navigate(`/${key}#${key}`);
   };
 
   const activeBg =

@@ -1,4 +1,8 @@
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* ajusta según altura de tu navbar */
+}
 
 /* Espacio para el navbar fijo */
 main {

@@ -1,0 +1,41 @@
+.carousel-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-frame {
+  width: 400px;
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.carousel-title {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1f1f;
+  height: 30px; /* fija el alto del título para evitar que mueva el slide */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
