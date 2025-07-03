@@ -118,3 +118,63 @@
 .habilidades-svg-columna img:hover {
   transform: scale(1.15);
 }
+
+
+/* --- MEDIA QUERIES PARA RESPONSIVE --- */
+@media (max-width: 768px) {
+  .sobre-mi-section {
+    padding: 40px 16px;
+    gap: 60px;
+  }
+
+  .sobre-mi-contenido {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .perfil-texto {
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  .sobre-mi-foto-container {
+    flex: 0 0 auto;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .foto-carnet-grande {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .carousel-wrapper {
+    max-width: 100%;
+  }
+
+  .carousel-frame {
+    height: 280px;
+  }
+
+  .carousel-image {
+    height: 200px;
+  }
+
+  .habilidades-svg-columna {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 0;
+    margin-top: 16px;
+  }
+
+  .habilidades-svg-columna img {
+    width: 36px;
+    height: 36px;
+    padding: 5px;
+    border-radius: 6px;
+  }
+}
