@@ -1,0 +1,96 @@
+/* NAV WRAPPER */
+.nav-wrapper {
+  width: 100%;
+  background-color: #000;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-wrapper.with-submenu {
+  padding-bottom: 40px;
+}
+
+/* NAVBAR */
+.full-navbar {
+  width: 100%;
+  background-color: #000;
+  transition: all 0.3s ease;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  position: relative;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* LINKS PRINCIPALES */
+.nav-link {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.4rem;
+  color: #e5e7eb;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: transparent;
+}
+
+/* Desiluminar al pasar cursor */
+.nav-link:hover {
+  opacity: 0.4;
+}
+
+/* ACTIVO */
+.nav-link.active {
+  color: #ffffff;
+  font-weight: 700;
+  background-color: transparent;
+}
+
+
+/* SUBMENÚ */
+.submenu-inside {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
+  padding: 0.2rem 0 0.2rem 0.7rem;
+}
+
+/* SUBMENÚ ITEMS */
+.submenu-item {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #d1d5db;
+  transition: opacity 0.3s ease;
+  text-transform: uppercase;
+  background: none;
+  padding: 0.35rem 0;
+}
+
+/* Desiluminar al pasar cursor */
+.submenu-item:hover {
+  opacity: 0.4;
+  transform: none;
+}
+
+/* ACTIVO del submenú */
+.submenu-item.active {
+  color: #ffffff;
+  font-weight: 700;
+}

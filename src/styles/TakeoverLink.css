@@ -1,0 +1,93 @@
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.takeover-fullscreen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+.menu-vertical {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* más compacto */
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: -30px; /* reduce el espacio vertical causado por logo */
+}
+
+.logo-jt-top {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  opacity: 0.95;
+}
+
+.menu-item {
+  display: flex;
+  overflow: hidden;
+  padding: 0.5rem 0;
+  font-size: 4vw;
+  font-weight: 100;
+  font-style: italic;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  color: #f0fff5;
+}
+
+.letter-wrapper {
+  display: flex;
+  gap: 0.2em;
+  overflow: hidden;
+}
+
+.letter {
+  display: inline-block;
+  font-size: 4vw;
+  font-style: italic;
+  font-weight: 100;
+  color: white;
+  pointer-events: none;
+}
+
+.overlay-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: background-image 0.4s ease-in-out, filter 0.3s ease;
+}
+
+.menu-item.active {
+  opacity: 1;
+  filter: brightness(1.1);
+  transition: opacity 0.3s, filter 0.3s;
+}
+
+.menu-item.inactive {
+  opacity: 0.4;
+  filter: blur(1px);
+  transition: opacity 0.3s, filter 0.3s;
+}
