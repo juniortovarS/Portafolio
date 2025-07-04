@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portafolio/static/css/main.8b391f58.css",
-    "main.js": "/Portafolio/static/js/main.8fb2b20d.js",
+    "main.css": "/Portafolio/static/css/main.b2f352fa.css",
+    "main.js": "/Portafolio/static/js/main.4db0a64f.js",
     "static/js/453.a9c87868.chunk.js": "/Portafolio/static/js/453.a9c87868.chunk.js",
     "static/media/sobreMi.png": "/Portafolio/static/media/sobreMi.71123ffdd0295953423b.png",
     "static/media/estudios.png": "/Portafolio/static/media/estudios.1f22b0ae7c601eacb198.png",
@@ -13,13 +13,14 @@
     "static/media/reseña4.png": "/Portafolio/static/media/reseña4.50adef7e8478d3ee7941.png",
     "static/media/reseña2.png": "/Portafolio/static/media/reseña2.56f7e1885f5369506f4d.png",
     "static/media/logoJT.png": "/Portafolio/static/media/logoJT.fc4993dd13166ace9307.png",
+    "static/media/subway.png": "/Portafolio/static/media/subway.40772c9067a41a237aba.png",
     "index.html": "/Portafolio/index.html",
-    "main.8b391f58.css.map": "/Portafolio/static/css/main.8b391f58.css.map",
-    "main.8fb2b20d.js.map": "/Portafolio/static/js/main.8fb2b20d.js.map",
+    "main.b2f352fa.css.map": "/Portafolio/static/css/main.b2f352fa.css.map",
+    "main.4db0a64f.js.map": "/Portafolio/static/js/main.4db0a64f.js.map",
     "453.a9c87868.chunk.js.map": "/Portafolio/static/js/453.a9c87868.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b391f58.css",
-    "static/js/main.8fb2b20d.js"
+    "static/css/main.b2f352fa.css",
+    "static/js/main.4db0a64f.js"
   ]
 }
