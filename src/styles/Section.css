@@ -14,6 +14,7 @@
 .sobre-mi-contenido {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   max-width: 1200px;
@@ -177,4 +178,364 @@
     height: 30px;
     padding: 4px;
   }
+}
+
+
+.habilidades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+  background: #0f0f0f;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 128, 0.1);
+}
+
+.svg-icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%) brightness(0.8);
+}
+
+.svg-icon:hover {
+  transform: scale(1.2);
+  filter: grayscale(0%) brightness(1.1);
+}
+.experiencias-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+/* Tarjeta individual de experiencia */
+.experiencia-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experiencia-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagen lateral */
+.experiencia-img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-right: 1px solid #e0e0e0;
+}
+
+/* Contenido textual */
+.experiencia-content {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experiencia-content h3 {
+  margin-bottom: 10px;
+  color: #222;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.experiencia-content p {
+  color: #444;
+  line-height: 1.6;
+  white-space: pre-line;
+  font-size: 1rem;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .experiencia-card {
+    flex-direction: column;
+  }
+
+  .experiencia-img {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .experiencia-content {
+    padding: 20px;
+  }
+}
+
+.fondo-negro {
+  background-color: #000;
+}
+
+
+.reseñas-section {
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.reseñas-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #222;
+  text-align: center;
+}
+
+/* Asegura que la galería no se desborde y se centre igual que el resto */
+.reseñas-galeria {
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  gap: 16px;
+  flex-wrap: wrap;          /* Permite salto de línea si es necesario */
+  padding-top: 12px;
+  padding-bottom: 12px;
+  max-width: 100%;          /* Evita que se salga del contenedor */
+  overflow-x: hidden;       /* Elimina scroll horizontal */
+}
+
+/* Las imágenes todas del mismo tamaño */
+.reseña-img {
+  height: 180px;
+  width: 320px;             /* Fuerza ancho uniforme */
+  object-fit: cover;        /* Recorta con proporción */
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Si deseas que se vean igual incluso en mobile */
+@media (max-width: 480px) {
+  .reseña-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.reseñas-galeria::-webkit-scrollbar {
+  height: 6px;
+}
+
+.reseñas-galeria::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+.reseñas-galeria::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* --- TIMELINE VERTICAL --- */
+/* --- CONTENEDOR TIMELINE --- */
+/* --- CONTENEDOR TIMELINE --- */
+.timeline {
+  position: relative;
+  margin-left: 12px;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 24px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* --- LÍNEA VERTICAL ANIMADA --- */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  width: 3px;
+  height: 0;
+  background-color: #00a896;
+  animation: growLine 1s ease-out forwards;
+}
+
+/* --- ÍTEM INDIVIDUAL --- */
+.timeline-item {
+  position: relative;
+  padding-left: 24px;
+  animation: fadeUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* --- PUNTO --- */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -19px;
+  width: 10px;
+  height: 10px;
+  background-color: #00a896;
+  border-radius: 50%;
+  z-index: 2;
+  transform: scale(0);
+  animation: popIn 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* --- AÑO --- */
+.timeline-year {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1c1c1c;
+  margin-bottom: 4px;
+}
+
+/* --- CONTENIDO --- */
+.timeline-content {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 800px;
+}
+
+/* --- ANIMACIONES --- */
+@keyframes growLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* --- RESPONSIVE CELULARES --- */
+@media (max-width: 480px) {
+  .timeline {
+    margin-left: 10px;
+    padding-left: 18px;
+    gap: 20px;
+  }
+
+  .timeline::before {
+    left: 3px;
+  }
+
+  .timeline-item {
+    padding-left: 20px;
+  }
+
+  .timeline-item::before {
+    left: -16px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .timeline-year,
+  .timeline-content {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+
+/* === Bloque contenedor de categorías === */
+/* Contenedor de categorías */
+.categorias-habilidades {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bloque-categoria h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #00a896;
+  margin-bottom: 12px;
+}
+
+/* Fila de íconos */
+.icon-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Estilo de cada ícono SVG */
+.svg-icon {
+  width: 42px;
+  height: 42px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: none; /* Asegura que se vean a color */
+  cursor: pointer;
+}
+
+.svg-icon:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 6px #00a896);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .icon-row {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .svg-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+/* Ajuste de desplazamiento para secciones ancladas */
+#habilidades,
+#blandas,
+#software,
+#experiencia,
+#proyectos,
+#contacto {
+  scroll-margin-top: 80px; /* Ajusta según tu barra */
 }

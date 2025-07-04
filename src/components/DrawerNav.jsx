@@ -8,6 +8,7 @@ const navItems = [
     path: "/sobremi",
     submenu: [
       { label: "PERFIL PROFESIONAL", path: "/sobremi#perfil" },
+      { label: "RESEÑAS Y PROYECTOS", path: "/sobremi#resenas" },
       { label: "MISIÓN Y VALORES", path: "/sobremi#mision" },
       { label: "INTERESES Y PASATIEMPOS", path: "/sobremi#interes" },
       { label: "¿QUÉ ME HACE DIFERENTE?", path: "/sobremi#diferencia" },
@@ -33,14 +34,12 @@ const navItems = [
   },
   {
     label: "EXPERIENCIA LABORAL",
-    path: "/experiencia",
-    submenu: [
-      { label: "DESARROLLO DE SOFTWARE", path: "/experiencia#software" },
-      { label: "ATENCIÓN AL CLIENTE Y VENTAS", path: "/experiencia#clientes" },
-      { label: "OPERACIONES Y LOGÍSTICA", path: "/experiencia#logistica" },
-      { label: "SERVICIOS DE ALIMENTOS", path: "/experiencia#alimentos" },
-      { label: "RESPONSABILIDAD Y RESOLUCIÓN", path: "/experiencia#resolucion" },,
-    ],
+  path: "/experiencia",
+  submenu: [
+    { label: "DESARROLLO DE SOFTWARE", path: "/experiencia#freelance" },
+    { label: "ATENCIÓN AL CLIENTE – PARDOS", path: "/experiencia#pardos" },
+    { label: "SERVICIOS DE ALIMENTOS – SUBWAY", path: "/experiencia#subway" },
+  ],
   },
 ];
 

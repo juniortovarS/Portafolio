@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import DrawerNav from "./components/DrawerNav";
 import TakeoverLink from "./components/TakeoverLink";
+import Bienvenida from "./components/Bienvenida";
 
 import SobreMi from "./pages/SobreMi";
 import Estudios from "./pages/Estudios";
@@ -9,7 +10,7 @@ import Experiencia from "./pages/Experiencia";
 
 const MainContent = ({ children }) => {
   const location = useLocation();
-  const showDrawer = location.pathname !== "/";
+  const showDrawer = location.pathname !== "/" && location.pathname !== "/bienvenida";
 
   return (
     <>
@@ -23,10 +24,13 @@ function App() {
   return (
     <BrowserRouter basename="/Portafolio">
       <Routes>
-        {/* Pantalla principal con TakeoverLink */}
-        <Route path="/" element={<TakeoverLink />} />
+        {/* Página de bienvenida por defecto */}
+        <Route path="/" element={<Bienvenida />} />
 
-        {/* Secciones con DrawerNav */}
+        {/* Página con animación tipo Takeover */}
+        <Route path="/portafolio" element={<TakeoverLink />} />
+
+        {/* Rutas con navegación lateral */}
         <Route
           path="/sobremi"
           element={
@@ -60,7 +64,7 @@ function App() {
           }
         />
 
-        {/* Redirigir rutas no válidas al inicio */}
+        {/* Redirección a bienvenida si ruta no existe */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
@@ -68,3 +72,6 @@ function App() {
 }
 
 export default App;
+
+
+
