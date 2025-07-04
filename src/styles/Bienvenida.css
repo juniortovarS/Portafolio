@@ -109,10 +109,11 @@
     letter-spacing: 0.04em;
   }
 
-  /* En móvil elimina el blur y la transición de filter para evitar parpadeo */
+  /* Quitar filtro, opacidad y transición en móvil para evitar parpadeos */
   .word-span {
     filter: none !important;
-    transition: opacity 0.5s ease; /* Solo opacidad con transición */
+    opacity: 1 !important;
+    transition: none !important;
   }
 
   .btn-ver,
@@ -121,3 +122,4 @@
     padding: 0.7rem 1.8rem;
   }
 }
+
