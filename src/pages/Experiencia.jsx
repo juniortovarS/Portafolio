@@ -67,7 +67,7 @@ const Experiencia = () => {
           {experiencias.map((exp, index) => (
             <motion.div
               key={index}
-              id={exp.id} // ← Esto hace que funcione con el submenú (#freelance, #pardos, #subway)
+              id={exp.id} // Esto hace que funcione con el submenú (#freelance, #pardos, #subway)
               className="experiencia-card"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +77,13 @@ const Experiencia = () => {
               <img
                 src={exp.imagen}
                 alt={`Imagen de ${exp.titulo}`}
-                className={`experiencia-img ${exp.id === "freelance" ? "fondo-negro" : ""}`}
+                className={`experiencia-img ${
+                  exp.id === "freelance"
+                    ? "fondo-negro"
+                    : exp.id === "subway"
+                    ? "fondo-negro-subway"
+                    : ""
+                }`}
               />
               <div className="experiencia-content">
                 <h3>{exp.titulo}</h3>
@@ -92,4 +98,3 @@ const Experiencia = () => {
 };
 
 export default Experiencia;
-

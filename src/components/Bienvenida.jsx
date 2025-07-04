@@ -81,11 +81,10 @@ const Bienvenida = () => {
             >
               Ver Portafolio
             </button>
-            <a 
-  href="/docs/Cv_Junior Tovar Salazar.pdf" 
+           <a
+  href="/Cv_Junior Tovar Salazar.pdf"
   download="Cv_Junior Tovar Salazar.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
+  className="btn-ver"
 >
   Descargar CV
 </a>
