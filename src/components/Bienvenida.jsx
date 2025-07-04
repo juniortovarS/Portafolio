@@ -81,8 +81,8 @@ const Bienvenida = () => {
             >
               Ver Portafolio
             </button>
-           <a
-  href={`${process.env.PUBLIC_URL}/Cv_Junior_Tovar_Salazar.pdf`}
+          <a
+  href="/Portafolio/Cv_Junior_Tovar_Salazar.pdf"
   download="Cv_Junior_Tovar_Salazar.pdf"
   className="btn-cv"
   target="_blank"
@@ -90,6 +90,7 @@ const Bienvenida = () => {
 >
   Descargar CV
 </a>
+
 
 
           </motion.div>
