@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../styles/Section.css";
+import wpIcon from "../assets/wp.png"; // ✅ Importación del ícono de WhatsApp
 
 // Importa tus imágenes
 import freelanceImg from "../assets/logoJT.png";
@@ -93,6 +94,17 @@ const Experiencia = () => {
           ))}
         </div>
       </motion.div>
+
+      <a
+        href="https://wa.me/51951038509?text=Hola%20Junior%2C%20acabo%20de%20ver%20tu%20p%C3%A1gina%20web%20sobre%20tu%20Portafolio%20%26%20CV%2C%20me%20parece%20muy%20interesante."
+        className="whatsapp-button"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WhatsApp"
+      >
+        <img src={wpIcon} alt="WhatsApp" />
+        <span className="tooltip-whatsapp">WhatsApp</span>
+      </a>
     </section>
   );
 };

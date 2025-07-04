@@ -8,6 +8,7 @@ import reseña2 from "../assets/reseña2.png";
 import reseña3 from "../assets/reseña3.png";
 import reseña4 from "../assets/reseña4.png";
 import reseña5 from "../assets/reseña5.png";
+import wpIcon from "../assets/wp.png"; // ✅ Aquí importas tu imagen
 
 const SobreMi = () => {
   const location = useLocation();
@@ -116,10 +117,24 @@ const SobreMi = () => {
         <div className="perfil-texto centrado">
           <h3>¿Qué me diferencia?</h3>
           <p>
-            Mi diferencia está en un enfoque integral que combina técnica, creatividad y compromiso humano. Domino herramientas y frameworks modernos, pero también entiendo profundamente las necesidades del usuario y negocio. Trabajo tanto en frontend como backend, siendo un puente entre diseño y funcionalidad. Soy autodidacta, resiliente y adaptable, siempre anticipándome a nuevas aprendizajes. Tengo ética y responsabilidad, enfocándome en detalles, eficiencia y mejora continua. Me involucro con pasión, buscando que mis proyectos no solo funcionen, sino que inspiren, aporten valor real y perduren. Mi valor no es solo lo que sé, sino cómo lo hago: con visión crítica, empatía y actitud de crecimiento.
+            Mi diferencia está en un enfoque integral que combina técnica, creatividad y compromiso humano. Domino herramientas y frameworks modernos, pero también entiendo profundamente las necesidades del usuario y negocio. Trabajo tanto en frontend como backend, siendo un puente entre diseño y funcionalidad. Soy autodidacta, resiliente y adaptable, siempre anticipándome a nuevos aprendizajes. Tengo ética y responsabilidad, enfocándome en detalles, eficiencia y mejora continua. Me involucro con pasión, buscando que mis proyectos no solo funcionen, sino que inspiren, aporten valor real y perduren. Mi valor no es solo lo que sé, sino cómo lo hago: con visión crítica, empatía y actitud de crecimiento.
           </p>
         </div>
       </motion.div>
+
+      {/* Botón flotante de WhatsApp con imagen desde src/assets/wp.png */}
+    <a
+  href="https://wa.me/51951038509?text=Hola%20Junior%2C%20acabo%20de%20ver%20tu%20p%C3%A1gina%20web%20sobre%20tu%20Portafolio%20%26%20CV%2C%20me%20parece%20muy%20interesante."
+  className="whatsapp-button"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="WhatsApp"
+>
+  <img src={wpIcon} alt="WhatsApp" />
+  <span className="tooltip-whatsapp">WhatsApp</span>
+</a>
+
+
     </section>
   );
 };

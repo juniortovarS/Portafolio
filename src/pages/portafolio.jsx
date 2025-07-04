@@ -24,6 +24,7 @@ const Portafolio = () => {
           Descargar CV
         </a>
       </div>
+      
     </section>
   );
 };
