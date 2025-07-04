@@ -81,13 +81,15 @@ const Bienvenida = () => {
             >
               Ver Portafolio
             </button>
-            <a
-              href="/Cv_Junior Tovar Salazar.pdf"
-              download
-              className="btn-cv"
-            >
-              Descargar CV
-            </a>
+            <a 
+  href="/docs/Cv_Junior Tovar Salazar.pdf" 
+  download="Cv_Junior Tovar Salazar.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Descargar CV
+</a>
+
           </motion.div>
         )}
       </div>
