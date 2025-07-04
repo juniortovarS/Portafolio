@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -44,36 +43,35 @@ const SobreMi = () => {
         <div className="perfil-texto centrado">
           <h3>Perfil Profesional</h3>
           <p>
-            Soy Junior Tovar, estudiante de Ingeniería de Sistemas con experiencia en desarrollo web full stack, enfocado en construir soluciones digitales modernas, escalables e intuitivas. Manejo lenguajes como JavaScript, TypeScript, Python, Java, C#, PHP y SQL, y trabajo con tecnologías frontend como React, Next.js, Tailwind CSS, Bootstrap, SASS, Vite y Framer Motion. En backend utilizo Node.js, Express, .NET Core, ASP.NET MVC y Spring Boot, desarrollando APIs REST seguras con autenticación JWT. Tengo dominio de bases de datos como MySQL, PostgreSQL, SQLite, MongoDB, SQL Server y Firebase. Además, uso herramientas como Git, GitHub, GitLab, Docker, Render, Vercel, Swagger y Postman, aplicando principios de diseño responsivo, arquitectura MVC, programación orientada a objetos y documentación técnica. Me considero autodidacta, proactivo y apasionado por crear experiencias digitales de alto impacto que combinan lógica estructurada con diseño centrado en el usuario.
+            Soy Junior Tovar, estudiante de Ingeniería de Sistemas con experiencia en desarrollo web full stack, enfocado en crear soluciones digitales modernas, escalables e intuitivas. Domino lenguajes como JavaScript, TypeScript, Python, Java, C#, PHP y SQL, y trabajo con tecnologías frontend como React, Next.js, Tailwind CSS y frameworks backend como Node.js, Express, .NET Core y Spring Boot. Desarrollo APIs REST seguras con autenticación JWT y manejo bases de datos como MySQL, PostgreSQL, SQLite, MongoDB y Firebase. Uso herramientas como Git, Docker, Render, Vercel, Swagger y Postman, aplicando principios de diseño responsivo, arquitectura MVC y programación orientada a objetos. Soy autodidacta, proactivo y apasionado por crear experiencias digitales que combinan lógica y diseño centrado en el usuario.
           </p>
         </div>
       </motion.div>
 
       {/* Reseñas y Proyectos */}
-    <motion.div
-  id="resenas"
-  className="sobre-mi-contenido"
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.2 }}
->
-  <div className="perfil-texto centrado">
-    <h3>Reseñas y Proyectos</h3>
-    <div className="reseñas-galeria">
-      {[reseña1, reseña2, reseña3, reseña4, reseña5].map((img, idx) => (
-        <motion.img
-          key={idx}
-          src={img}
-          alt={`Reseña ${idx + 1}`}
-          className="reseña-img"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
-        />
-      ))}
-    </div>
-  </div>
-</motion.div>
-
+      <motion.div
+        id="resenas"
+        className="sobre-mi-contenido"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <div className="perfil-texto centrado">
+          <h3>Reseñas y Proyectos</h3>
+          <div className="reseñas-galeria">
+            {[reseña1, reseña2, reseña3, reseña4, reseña5].map((img, idx) => (
+              <motion.img
+                key={idx}
+                src={img}
+                alt={`Reseña ${idx + 1}`}
+                className="reseña-img"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              />
+            ))}
+          </div>
+        </div>
+      </motion.div>
 
       {/* Misión y Valores */}
       <motion.div
@@ -86,7 +84,7 @@ const SobreMi = () => {
         <div className="perfil-texto centrado">
           <h3>Misión y Valores</h3>
           <p>
-            Mi misión como futuro ingeniero de sistemas es desarrollar soluciones tecnológicas innovadoras, funcionales y accesibles que generen un impacto positivo en las personas, empresas y comunidades. Busco combinar el pensamiento analítico con la creatividad para construir productos digitales que no solo resuelvan problemas reales, sino que también aporten valor a largo plazo. Me guío por valores fundamentales como la responsabilidad, la ética profesional, la mejora continua y el aprendizaje constante. Creo firmemente en la colaboración, el respeto por la diversidad de ideas y el compromiso con la calidad en cada etapa del desarrollo. Mi enfoque está centrado en el usuario, priorizando la usabilidad, el rendimiento y la experiencia final, sin perder de vista la escalabilidad, la seguridad y la sostenibilidad tecnológica. Aspiro a crecer como profesional íntegro, que no solo domine herramientas y lenguajes, sino que también contribuya a construir una industria tecnológica más humana, transparente y orientada al futuro.
+            Mi misión es crear soluciones tecnológicas innovadoras, accesibles y funcionales que generen un impacto positivo en personas, empresas y comunidades. Combino pensamiento analítico y creatividad para desarrollar productos que resuelvan problemas reales y aporten valor a largo plazo. Me guío por la responsabilidad, ética profesional, mejora continua y aprendizaje constante. Valoro la colaboración, diversidad de ideas y compromiso con la calidad, enfocándome en la usabilidad, rendimiento, seguridad y escalabilidad. Aspiro a crecer como un profesional íntegro, que aporte a una industria tecnológica más humana y orientada al futuro.
           </p>
         </div>
       </motion.div>
@@ -102,7 +100,7 @@ const SobreMi = () => {
         <div className="perfil-texto centrado">
           <h3>Intereses y Pasatiempos</h3>
           <p>
-            Más allá del mundo del desarrollo, me apasiona mantener un equilibrio entre el crecimiento profesional y personal. En mis tiempos libres disfruto jugar fútbol, una actividad que no solo me permite mantenerme activo, sino también reforzar valores como el trabajo en equipo, la disciplina y la estrategia. Como freelancer, encuentro satisfacción diseñando páginas web profesionales y funcionales, donde puedo aplicar mi creatividad y conocimientos técnicos para transformar ideas en experiencias digitales impactantes. También me gusta escuchar música, ya que me ayuda a relajarme y concentrarme en mis procesos creativos. Asisto regularmente al gimnasio, priorizando el bienestar físico como parte fundamental de mi productividad y enfoque. Además, soy una persona curiosa y autodidacta: me gusta leer sobre tecnología, desarrollo personal y actualidad, y constantemente busco nuevas formas de optimizar mis habilidades, mantenerme actualizado con las últimas tendencias del sector y crecer tanto a nivel técnico como humano. Considero que cada interés personal aporta a mi visión integral como profesional comprometido, disciplinado y en constante evolución.
+            Fuera del desarrollo, busco equilibrio entre lo profesional y personal. Disfruto jugar fútbol, actividad que fortalece valores como trabajo en equipo, disciplina y estrategia. Como freelancer, diseño páginas web profesionales donde aplico creatividad y técnica. También me relaja la música, y mantengo el bienestar físico asistiendo al gimnasio. Soy curioso y autodidacta, interesado en tecnología, desarrollo personal y tendencias actuales, buscando siempre optimizar habilidades y crecer tanto técnica como humanamente. Cada interés aporta a mi visión integral como profesional comprometido y en constante evolución.
           </p>
         </div>
       </motion.div>
@@ -118,7 +116,7 @@ const SobreMi = () => {
         <div className="perfil-texto centrado">
           <h3>¿Qué me diferencia?</h3>
           <p>
-            Lo que me diferencia de los demás es mi enfoque integral y equilibrado entre la técnica, la creatividad y el compromiso humano. No solo domino herramientas, lenguajes y frameworks modernos, sino que también me esfuerzo por comprender profundamente las necesidades del usuario, del negocio y del contexto en el que se implementa una solución. Mi capacidad para trabajar tanto en el frontend como en el backend me permite tener una visión completa del desarrollo, y eso me convierte en un puente entre el diseño y la funcionalidad. Soy una persona autodidacta, resiliente y altamente adaptable: no espero a que alguien me diga qué aprender, me anticipo y me capacito constantemente. Además, tengo un fuerte sentido de responsabilidad y una ética de trabajo enfocada en los detalles, la eficiencia y la mejora continua. Me involucro con pasión en cada proyecto, ya sea personal, académico o freelance, buscando siempre que lo que construyo no solo funcione, sino que inspire, aporte valor real y se sostenga en el tiempo. Lo que me diferencia no es solo lo que sé hacer, sino cómo lo hago: con actitud, visión crítica, empatía y una mentalidad orientada a crecer y aportar soluciones que marquen la diferencia.
+            Mi diferencia está en un enfoque integral que combina técnica, creatividad y compromiso humano. Domino herramientas y frameworks modernos, pero también entiendo profundamente las necesidades del usuario y negocio. Trabajo tanto en frontend como backend, siendo un puente entre diseño y funcionalidad. Soy autodidacta, resiliente y adaptable, siempre anticipándome a nuevas aprendizajes. Tengo ética y responsabilidad, enfocándome en detalles, eficiencia y mejora continua. Me involucro con pasión, buscando que mis proyectos no solo funcionen, sino que inspiren, aporten valor real y perduren. Mi valor no es solo lo que sé, sino cómo lo hago: con visión crítica, empatía y actitud de crecimiento.
           </p>
         </div>
       </motion.div>
