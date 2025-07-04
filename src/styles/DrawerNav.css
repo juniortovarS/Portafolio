@@ -20,19 +20,91 @@
   flex-direction: column;
   z-index: 1000;
   position: relative;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
+/* Contenedor de links + íconos */
 .nav-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0 1rem;
 }
 
-.nav-item {
-  position: relative;
+/* Contenedor de los ítems de navegación */
+.nav-items-group {
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Íconos sociales a la derecha */
+.icons-inline {
+  display: flex;
+  gap: 0.6rem;
   align-items: center;
+  justify-content: flex-end;
+}
+
+/* Cada ícono individual */
+.icons-inline a {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  display: grid;
+  place-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Ícono base */
+.icons-inline a svg {
+  z-index: 10;
+  color: #ffffff;
+  font-size: 2rem;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+/* Animación en hover */
+.icons-inline a:hover svg {
+  transform: scale(1.1);
+}
+
+/* Capa animada encima */
+.icons-inline a div {
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  display: grid;
+  place-content: center;
+  color: white;
+  pointer-events: none;
+  font-size: 2rem;
+}
+
+/* Tooltip opcional */
+.icons-inline a::after {
+  content: attr(aria-label);
+  position: absolute;
+  bottom: -1.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.icons-inline a:hover::after {
+  opacity: 1;
 }
 
 /* LINKS PRINCIPALES */
@@ -61,6 +133,13 @@
   background-color: transparent;
 }
 
+/* NAV ITEM */
+.nav-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* SUBMENÚ */
 .submenu-inside {
@@ -86,7 +165,6 @@
 /* Desiluminar al pasar cursor */
 .submenu-item:hover {
   opacity: 0.4;
-  transform: none;
 }
 
 /* ACTIVO del submenú */
@@ -95,25 +173,28 @@
   font-weight: 700;
 }
 
-
-.full-navbar {
-  max-height: 100vh;
-  overflow-y: auto;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
   .full-navbar {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
-    max-height: 100vh;
-    overflow-y: auto;
   }
 
   .nav-container {
     flex-direction: column;
     gap: 1rem;
-    width: 100%;
+    align-items: flex-start;
+  }
+
+  .nav-items-group {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .icons-inline {
+    justify-content: flex-start;
+    margin-top: 1rem;
   }
 
   .nav-link {
@@ -130,5 +211,42 @@
   .submenu-item {
     font-size: 0.95rem;
     padding: 0.4rem 0;
+  }
+
+  .icons-inline a {
+    width: 42px;
+    height: 42px;
+  }
+
+  .icons-inline a svg {
+    font-size: 1.6rem;
+  }
+}
+
+
+/* Íconos sociales para escritorio */
+.icons-inline-desktop {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Solo visible en pantallas grandes */
+@media (max-width: 768px) {
+  .icons-inline-desktop {
+    display: none;
+  }
+
+  .submenu-icons {
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 0;
+  }
+}
+
+/* Solo visible en móviles dentro del submenu */
+@media (min-width: 769px) {
+  .submenu-icons {
+    display: none;
   }
 }
