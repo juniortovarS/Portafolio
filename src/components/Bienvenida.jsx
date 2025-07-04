@@ -82,12 +82,15 @@ const Bienvenida = () => {
               Ver Portafolio
             </button>
            <a
-  href="/Cv_Junior Tovar Salazar.pdf"
-  download="Cv_Junior Tovar Salazar.pdf"
-  className="btn-ver"
+  href={`${process.env.PUBLIC_URL}/Cv_Junior_Tovar_Salazar.pdf`}
+  download="Cv_Junior_Tovar_Salazar.pdf"
+  className="btn-cv"
+  target="_blank"
+  rel="noopener noreferrer"
 >
   Descargar CV
 </a>
+
 
           </motion.div>
         )}
